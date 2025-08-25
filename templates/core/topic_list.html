@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>Topics: <a href="{% url 'core:topic-create' %}" class="btn btn-primary link-to-page">New topic</a></h1>
+  <h1>Topics: <a href="{% url 'core:topic-create' %}" class="btn btn-primary link-to-page"><i
+      class="bi bi-plus-circle me-1"></i>New topic</a></h1>
   {% if topic_list %}
     <table class="table table-striped">
       <thead>
@@ -17,8 +18,10 @@
         <tr>
           <th scope="row"><a href="{% url 'core:topic-detail' pk=topic.pk %}">{{ topic.id }}</a></th>
           <td>{{ topic.name }}</td>
-          <td><a href="{% url 'core:topic-update' pk=topic.pk %}" class="btn btn-outline-info mb-0">Update</a></td>
-          <td><a href="{% url 'core:topic-delete' pk=topic.pk %}" class="btn btn-outline-danger mb-0">Delete</a></td>
+          <td><a href="{% url 'core:topic-update' pk=topic.pk %}" class="btn btn-outline-info mb-0">
+            <i class="bi bi-arrow-repeat"></i></a></td>
+          <td><a href="{% url 'core:topic-delete' pk=topic.pk %}" class="btn btn-outline-danger mb-0">
+            <i class="bi bi-trash"></i></a></td>
         </tr>
       {% endfor %}
       </tbody>

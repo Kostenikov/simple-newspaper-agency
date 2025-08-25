@@ -2,6 +2,7 @@ from django.contrib.auth import get_user_model
 from django.urls import reverse_lazy
 from django.views import generic
 
+from core.forms import NewspaperForm
 from core.models import Topic, Newspaper
 
 Redactor = get_user_model()
@@ -54,6 +55,28 @@ class NewspaperListView(generic.ListView):
     model = Newspaper
     queryset = Newspaper.objects.select_related("topic")
     paginate_by = 10
+
+
+class NewspaperDetailView(generic.DetailView):
+    model = Newspaper
+    queryset = Newspaper.objects.select_related("topic").prefetch_related("publishers")
+
+
+class NewspaperCreateView(generic.CreateView):
+    model = Newspaper
+    form_class = NewspaperForm
+    success_url = reverse_lazy("core:newspaper-list")
+
+
+class NewspaperUpdateView(generic.UpdateView):
+    model = Newspaper
+    form_class = NewspaperForm
+    success_url = reverse_lazy("core:newspaper-list")
+
+
+class NewspaperDeleteView(generic.DeleteView):
+    model = Newspaper
+    success_url = reverse_lazy("core:newspaper-list")
 
 
 class RedactorListView(generic.ListView):

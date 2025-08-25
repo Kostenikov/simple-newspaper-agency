@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>Newspapers:</h1>
+  <h1>Newspapers: <a href="{% url 'core:newspaper-create' %}" class="btn btn-primary link-to-page"><i
+      class="bi bi-plus-circle me-1"></i>Add new</a></h1>
   {% if newspaper_list %}
     <table class="table table-striped">
       <thead>
@@ -9,6 +10,8 @@
         <th scope="col">#</th>
         <th scope="col">Title</th>
         <th scope="col">Topic</th>
+        <th scope="col">Update</th>
+        <th scope="col">Delete</th>
         <th scope="col">Published date</th>
         <th scope="col">Created</th>
         <th scope="col">Updated</th>
@@ -17,9 +20,13 @@
       <tbody>
       {% for newspaper in newspaper_list %}
         <tr>
-          <th scope="row"><a href="">{{ newspaper.id }}</a></th>
+          <th scope="row"><a href="{% url 'core:newspaper-detail' pk=newspaper.pk %}">{{ newspaper.id }}</a></th>
           <td>{{ newspaper.title }}</td>
           <td>{{ newspaper.topic }}</td>
+          <td><a href="{% url 'core:newspaper-update' pk=newspaper.pk %}" class="btn btn-outline-info mb-0">
+            <i class="bi bi-arrow-repeat"></i></a></td>
+          <td><a href="{% url 'core:newspaper-delete' pk=newspaper.pk %}" class="btn btn-outline-danger mb-0">
+            <i class="bi bi-trash"></i></a></td>
           <td>{{ newspaper.published_date }}</td>
           <td>{{ newspaper.created_at }}</td>
           <td>{{ newspaper.updated_at }}</td>
