@@ -3,6 +3,7 @@
 {% block content %}
   <h1>Newspapers: <a href="{% url 'core:newspaper-create' %}" class="btn btn-primary link-to-page"><i
       class="bi bi-plus-circle me-1"></i>Add new</a></h1>
+  {% include "includes/search_form.html" %}
   {% if newspaper_list %}
     <table class="table table-striped">
       <thead>
