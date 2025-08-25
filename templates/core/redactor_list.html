@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Redactors:</h1>
+  {% if redactor_list %}
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First name</th>
+        <th scope="col">Last name</th>
+        <th scope="col">Email name</th>
+        <th scope="col">Years of experience</th>
+      </tr>
+      </thead>
+      <tbody>
+      {% for redactor in redactor_list %}
+        <tr>
+          <th scope="row"><a href="">{{ redactor.id }}</a></th>
+          <td>{{ redactor.first_name }}</td>
+          <td>{{ redactor.last_name }}</td>
+          <td>{{ redactor.email }}</td>
+          <td>{{ redactor.years_of_experience }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <h2>There are no redactors!</h2>
+  {% endif %}
+{% endblock %}

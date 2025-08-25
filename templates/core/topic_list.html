@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Topics:</h1>
+  {% if topic_list %}
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Topic name</th>
+      </tr>
+      </thead>
+      <tbody>
+      {% for topic in topic_list %}
+        <tr>
+          <th scope="row"><a href="">{{ topic.id }}</a></th>
+          <td>{{ topic.name }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <h2>There are no topics!</h2>
+  {% endif %}
+{% endblock %}
