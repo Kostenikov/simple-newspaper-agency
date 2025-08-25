@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="card border-primary mb-4" style="width: 18rem;">
+    <div class="card-header bg-primary text-white">
+      <h5 class="mb-0">Topic info:</h5>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Name: {{ topic.name }}</h5>
+      <p class="card-text">News count: {{ topic_news_count }}</p>
+    </div>
+  </div>
+
+  {% if topic.newspapers.all %}
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Published date</th>
+        <th scope="col">Created</th>
+        <th scope="col">Updated</th>
+      </tr>
+      </thead>
+      <tbody>
+      {% for newspaper in topic.newspapers.all %}
+        <tr>
+          <th scope="row"><a href="">{{ newspaper.id }}</a></th>
+          <td>{{ newspaper.title }}</td>
+          <td>{{ newspaper.published_date }}</td>
+          <td>{{ newspaper.created_at }}</td>
+          <td>{{ newspaper.updated_at }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <h2>This topic doesn't have any newspapers!</h2>
+  {% endif %}
+
+{% endblock %}

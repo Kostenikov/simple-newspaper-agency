@@ -1,4 +1,5 @@
 from django.contrib.auth import get_user_model
+from django.urls import reverse_lazy
 from django.views import generic
 
 from core.models import Topic, Newspaper
@@ -20,6 +21,33 @@ class HomeView(generic.TemplateView):
 
 class TopicListView(generic.ListView):
     model = Topic
+
+
+class TopicDetailView(generic.DetailView):
+    model = Topic
+    queryset = Topic.objects.prefetch_related("newspapers")
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["topic_news_count"] = self.object.newspapers.count()
+        return context
+
+
+class TopicCreateView(generic.CreateView):
+    model = Topic
+    fields = "__all__"
+    success_url = reverse_lazy("core:topic-list")
+
+
+class TopicUpdateView(generic.UpdateView):
+    model = Topic
+    fields = "__all__"
+    success_url = reverse_lazy("core:topic-list")
+
+
+class TopicDeleteView(generic.DeleteView):
+    model = Topic
+    success_url = reverse_lazy("core:topic-list")
 
 
 class NewspaperListView(generic.ListView):

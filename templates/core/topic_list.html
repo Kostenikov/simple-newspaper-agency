@@ -1,20 +1,24 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>Topics:</h1>
+  <h1>Topics: <a href="{% url 'core:topic-create' %}" class="btn btn-primary link-to-page">New topic</a></h1>
   {% if topic_list %}
     <table class="table table-striped">
       <thead>
       <tr>
         <th scope="col">#</th>
         <th scope="col">Topic name</th>
+        <th scope="col">Update</th>
+        <th scope="col">Delete</th>
       </tr>
       </thead>
       <tbody>
       {% for topic in topic_list %}
         <tr>
-          <th scope="row"><a href="">{{ topic.id }}</a></th>
+          <th scope="row"><a href="{% url 'core:topic-detail' pk=topic.pk %}">{{ topic.id }}</a></th>
           <td>{{ topic.name }}</td>
+          <td><a href="{% url 'core:topic-update' pk=topic.pk %}" class="btn btn-outline-info mb-0">Update</a></td>
+          <td><a href="{% url 'core:topic-delete' pk=topic.pk %}" class="btn btn-outline-danger mb-0">Delete</a></td>
         </tr>
       {% endfor %}
       </tbody>
