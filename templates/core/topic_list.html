@@ -3,6 +3,7 @@
 {% block content %}
   <h1>Topics: <a href="{% url 'core:topic-create' %}" class="btn btn-primary link-to-page"><i
       class="bi bi-plus-circle me-1"></i>New topic</a></h1>
+  {% include "includes/search_form.html" %}
   {% if topic_list %}
     <table class="table table-striped">
       <thead>

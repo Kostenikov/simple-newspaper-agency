@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>Redactors:</h1>
+  <h1>Redactors: <a href="{% url 'core:redactor-create' %}" class="btn btn-primary link-to-page"><i
+      class="bi bi-plus-circle me-1"></i>Add new</a></h1>
   {% include "includes/search_form.html" %}
   {% if redactor_list %}
     <table class="table table-striped">
@@ -12,6 +13,8 @@
         <th scope="col">Last name</th>
         <th scope="col">Email name</th>
         <th scope="col">Years of experience</th>
+        <th scope="col">Update</th>
+        <th scope="col">Delete</th>
       </tr>
       </thead>
       <tbody>
@@ -22,6 +25,10 @@
           <td>{{ redactor.last_name }}</td>
           <td>{{ redactor.email }}</td>
           <td>{{ redactor.years_of_experience }}</td>
+          <td><a href="{% url 'core:redactor-update' pk=redactor.pk %}" class="btn btn-outline-info mb-0">
+            <i class="bi bi-arrow-repeat"></i></a></td>
+          <td><a href="{% url 'core:redactor-delete' pk=redactor.pk %}" class="btn btn-outline-danger mb-0">
+            <i class="bi bi-trash"></i></a></td>
         </tr>
       {% endfor %}
       </tbody>

@@ -4,7 +4,7 @@ from django.db.models import Q
 from django.urls import reverse_lazy
 from django.views import generic
 
-from core.forms import NewspaperForm, SearchForm
+from core.forms import NewspaperForm, SearchForm, RedactorCreationForm, RedactorUpdateForm
 from core.models import Topic, Newspaper
 
 Redactor = get_user_model()
@@ -25,6 +25,23 @@ class HomeView(generic.TemplateView):
 class TopicListView(LoginRequiredMixin, generic.ListView):
     model = Topic
     paginate_by = 10
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        query = self.request.GET.get("query", "")
+        context["search_form"] = SearchForm(
+            initial={"query": query}
+        )
+        return context
+
+    def get_queryset(self):
+        queryset = Topic.objects.all()
+        form = SearchForm(self.request.GET)
+
+        if form.is_valid():
+            return queryset.filter(name__icontains=form.cleaned_data["query"])
+
+        return queryset
 
 
 class TopicDetailView(LoginRequiredMixin, generic.DetailView):
@@ -58,10 +75,8 @@ class NewspaperListView(LoginRequiredMixin, generic.ListView):
     model = Newspaper
     paginate_by = 10
 
-    def get_context_data(
-            self, *, object_list=..., **kwargs
-    ):
-        context = super(NewspaperListView, self).get_context_data(**kwargs)
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
         query = self.request.GET.get("query", "")
         context["search_form"] = SearchForm(
             initial={"query": query}
@@ -108,10 +123,8 @@ class RedactorListView(LoginRequiredMixin, generic.ListView):
     template_name = "core/redactor_list.html"
     paginate_by = 10
 
-    def get_context_data(
-            self, *, object_list=..., **kwargs
-    ):
-        context = super(RedactorListView, self).get_context_data(**kwargs)
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
         query = self.request.GET.get("query", "")
         context["search_form"] = SearchForm(
             initial={"query": query}
@@ -136,3 +149,23 @@ class RedactorDetailView(LoginRequiredMixin, generic.DetailView):
     model = Redactor
     template_name = "core/redactor_detail.html"
     queryset = Redactor.objects.prefetch_related("newspapers__topic")
+
+
+class RedactorCreateView(LoginRequiredMixin, generic.CreateView):
+    model = Redactor
+    form_class = RedactorCreationForm
+    template_name = "core/redactor_form.html"
+    success_url = reverse_lazy("core:redactor-list")
+
+
+class RedactorUpdateView(LoginRequiredMixin, generic.UpdateView):
+    model = Redactor
+    form_class = RedactorUpdateForm
+    template_name = "core/redactor_form.html"
+    success_url = reverse_lazy("core:redactor-list")
+
+
+class RedactorDeleteView(LoginRequiredMixin, generic.DeleteView):
+    model = Redactor
+    template_name = "core/redactor_confirm_delete.html"
+    success_url = reverse_lazy("core:redactor-list")
