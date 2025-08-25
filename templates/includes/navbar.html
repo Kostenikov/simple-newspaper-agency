@@ -11,7 +11,7 @@
         {% if user.is_authenticated %}
           <li class="nav-item d-flex align-items-center me-3">
             <i class="bi bi-person-circle me-1"></i>
-            <span>{{ user.first_name }} {{ user.last_name }}</span>
+            <span><a href="{% url 'core:redactor-detail' pk=user.pk %}">{{ user.get_full_name }}</a></span>
           </li>
           <li class="nav-item">
             <form action="{% url 'logout' %}" method="post">

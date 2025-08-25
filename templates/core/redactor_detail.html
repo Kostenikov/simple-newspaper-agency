@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <div class="card border-primary mb-4" style="width: 18rem;">
+    <div class="card-header bg-primary text-white">
+      <h5 class="mb-0">Redactor info:</h5>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">{{ redactor.get_full_name }}</h5>
+      <p class="card-text">Email: {{ redactor.email }}</p>
+      <hr>
+      <p class="card-text">Experience: {{ redactor.years_of_experience }} year{{ redactor.years_of_experience|pluralize }}</p>
+    </div>
+  </div>
+
+  <h1>Newspapers:</h1>
+  {% if redactor.newspapers.all %}
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Title</th>
+        <th scope="col">Update</th>
+        <th scope="col">Delete</th>
+        <th scope="col">Published date</th>
+        <th scope="col">Created</th>
+        <th scope="col">Updated</th>
+      </tr>
+      </thead>
+      <tbody>
+      {% for newspaper in redactor.newspapers.all %}
+        <tr>
+          <th scope="row"><a href="{% url 'core:newspaper-detail' pk=newspaper.pk %}">{{ newspaper.id }}</a></th>
+          <td>{{ newspaper.title }}</td>
+          <td><a href="{% url 'core:newspaper-update' pk=newspaper.pk %}" class="btn btn-outline-info mb-0">
+            <i class="bi bi-arrow-repeat"></i></a></td>
+          <td><a href="{% url 'core:newspaper-delete' pk=newspaper.pk %}" class="btn btn-outline-danger mb-0">
+            <i class="bi bi-trash"></i></a></td>
+          <td>{{ newspaper.published_date }}</td>
+          <td>{{ newspaper.created_at }}</td>
+          <td>{{ newspaper.updated_at }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+  {% else %}
+    <h2>This redactor doesn't have any newspapers!</h2>
+  {% endif %}
+
+{% endblock %}
