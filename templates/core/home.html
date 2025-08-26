@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <section class="container py-5">
+
+    <div class="text-center mb-5">
+      <h1 class="display-4">Newspaper Agency Dashboard</h1>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4 mb-4">
+        <div class="card border-info h-100 shadow-sm">
+          <div class="card-body text-center">
+            <i class="bi bi-bookmark-fill fs-1 text-info mb-3"></i>
+            <h2 class="display-4">{{ topics_count }}</h2>
+            <p class="h5 mb-0">Topics</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card border-success h-100 shadow-sm">
+          <div class="card-body text-center">
+            <i class="bi bi-newspaper fs-1 text-success mb-3"></i>
+            <h2 class="display-4">{{ newspapers_count }}</h2>
+            <p class="h5 mb-0">Newspapers</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4">
+        <div class="card border-primary h-100 shadow-sm">
+          <div class="card-body text-center">
+            <i class="bi bi-person-badge-fill fs-1 text-primary mb-3"></i>
+            <h2 class="display-4">{{ redactors_count }}</h2>
+            <p class="h5 mb-0">Redactors</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+{% endblock %}

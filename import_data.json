@@ -1,0 +1,961 @@
+[
+  {
+    "model": "accounts.redactor",
+    "pk": 1,
+    "fields": {
+      "username": "admin",
+      "first_name": "John",
+      "last_name": "Doe",
+      "email": "admin@admin.com",
+      "years_of_experience": 0,
+      "password": "pbkdf2_sha256$1000000$w2rXlod7IhLNOsLY4pTPnh$SePptv0ZtmVkJ7QERvRCipjfTKqy3GufacBJFzlpdMo=",
+      "is_superuser": true,
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-08-25T12:49:04Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.redactor",
+    "pk": 2,
+    "fields": {
+      "username": "alice.smith",
+      "first_name": "Alice",
+      "last_name": "Smith",
+      "email": "alice.smith@example.com",
+      "years_of_experience": 7,
+      "password": "pbkdf2_sha256$260000$4r5IGuW2faqB$ADlIcPznX9nJ81P2T9X4Mk/T7IIHmEC+e+4o8DZdvLs=",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-08-25T12:50:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.redactor",
+    "pk": 3,
+    "fields": {
+      "username": "bob.johnson",
+      "first_name": "Bob",
+      "last_name": "Johnson",
+      "email": "bob.johnson@example.com",
+      "years_of_experience": 2,
+      "password": "pbkdf2_sha256$260000$4r5IGuW2faqB$ADlIcPznX9nJ81P2T9X4Mk/T7IIHmEC+e+4o8DZdvLs=",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-08-25T12:50:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.redactor",
+    "pk": 4,
+    "fields": {
+      "username": "carol.williams",
+      "first_name": "Carol",
+      "last_name": "Williams",
+      "email": "carol.williams@example.com",
+      "years_of_experience": 10,
+      "password": "pbkdf2_sha256$260000$4r5IGuW2faqB$ADlIcPznX9nJ81P2T9X4Mk/T7IIHmEC+e+4o8DZdvLs=",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-08-25T12:50:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.redactor",
+    "pk": 5,
+    "fields": {
+      "username": "david.brown",
+      "first_name": "David",
+      "last_name": "Brown",
+      "email": "david.brown@example.com",
+      "years_of_experience": 5,
+      "password": "pbkdf2_sha256$260000$4r5IGuW2faqB$ADlIcPznX9nJ81P2T9X4Mk/T7IIHmEC+e+4o8DZdvLs=",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-08-25T12:50:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.redactor",
+    "pk": 6,
+    "fields": {
+      "username": "eva.davis",
+      "first_name": "Eva",
+      "last_name": "Davis",
+      "email": "eva.davis@example.com",
+      "years_of_experience": 8,
+      "password": "pbkdf2_sha256$260000$4r5IGuW2faqB$ADlIcPznX9nJ81P2T9X4Mk/T7IIHmEC+e+4o8DZdvLs=",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-08-25T12:50:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.redactor",
+    "pk": 7,
+    "fields": {
+      "username": "frank.miller",
+      "first_name": "Frank",
+      "last_name": "Miller",
+      "email": "frank.miller@example.com",
+      "years_of_experience": 1,
+      "password": "pbkdf2_sha256$260000$4r5IGuW2faqB$ADlIcPznX9nJ81P2T9X4Mk/T7IIHmEC+e+4o8DZdvLs=",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-08-25T12:50:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.redactor",
+    "pk": 8,
+    "fields": {
+      "username": "grace.wilson",
+      "first_name": "Grace",
+      "last_name": "Wilson",
+      "email": "grace.wilson@example.com",
+      "years_of_experience": 6,
+      "password": "pbkdf2_sha256$260000$4r5IGuW2faqB$ADlIcPznX9nJ81P2T9X4Mk/T7IIHmEC+e+4o8DZdvLs=",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-08-25T12:50:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.redactor",
+    "pk": 9,
+    "fields": {
+      "username": "henry.moore",
+      "first_name": "Henry",
+      "last_name": "Moore",
+      "email": "henry.moore@example.com",
+      "years_of_experience": 4,
+      "password": "pbkdf2_sha256$260000$4r5IGuW2faqB$ADlIcPznX9nJ81P2T9X4Mk/T7IIHmEC+e+4o8DZdvLs=",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-08-25T12:50:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "accounts.redactor",
+    "pk": 10,
+    "fields": {
+      "username": "irene.taylor",
+      "first_name": "Irene",
+      "last_name": "Taylor",
+      "email": "irene.taylor@example.com",
+      "years_of_experience": 9,
+      "password": "pbkdf2_sha256$260000$4r5IGuW2faqB$ADlIcPznX9nJ81P2T9X4Mk/T7IIHmEC+e+4o8DZdvLs=",
+      "is_superuser": false,
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-08-25T12:50:00Z",
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "core.topic",
+    "pk": 1,
+    "fields": {
+      "name": "Politics",
+      "created_at": "2025-08-25T12:00:00Z",
+      "updated_at": "2025-08-25T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.topic",
+    "pk": 2,
+    "fields": {
+      "name": "Economy",
+      "created_at": "2025-08-25T12:00:00Z",
+      "updated_at": "2025-08-25T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.topic",
+    "pk": 3,
+    "fields": {
+      "name": "Sports",
+      "created_at": "2025-08-25T12:00:00Z",
+      "updated_at": "2025-08-25T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.topic",
+    "pk": 4,
+    "fields": {
+      "name": "Culture",
+      "created_at": "2025-08-25T12:00:00Z",
+      "updated_at": "2025-08-25T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.topic",
+    "pk": 5,
+    "fields": {
+      "name": "Science",
+      "created_at": "2025-08-25T12:00:00Z",
+      "updated_at": "2025-08-25T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.topic",
+    "pk": 6,
+    "fields": {
+      "name": "Technology",
+      "created_at": "2025-08-25T12:00:00Z",
+      "updated_at": "2025-08-25T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.topic",
+    "pk": 7,
+    "fields": {
+      "name": "Health",
+      "created_at": "2025-08-25T12:00:00Z",
+      "updated_at": "2025-08-25T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.topic",
+    "pk": 8,
+    "fields": {
+      "name": "Travel",
+      "created_at": "2025-08-25T12:00:00Z",
+      "updated_at": "2025-08-25T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.topic",
+    "pk": 9,
+    "fields": {
+      "name": "Education",
+      "created_at": "2025-08-25T12:00:00Z",
+      "updated_at": "2025-08-25T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.topic",
+    "pk": 10,
+    "fields": {
+      "name": "Environment",
+      "created_at": "2025-08-25T12:00:00Z",
+      "updated_at": "2025-08-25T12:00:00Z"
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 1,
+    "fields": {
+      "created_at": "2025-08-20T10:00:00Z",
+      "updated_at": "2025-08-20T10:00:00Z",
+      "title": "Global Political Trends",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "published_date": "2025-08-20T10:00:00Z",
+      "topic": 1,
+      "publishers": [1, 2]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 2,
+    "fields": {
+      "created_at": "2025-08-19T09:30:00Z",
+      "updated_at": "2025-08-19T09:30:00Z",
+      "title": "Market Insights",
+      "content": "Praesent in leo eget est imperdiet interdum.",
+      "published_date": "2025-08-19T09:30:00Z",
+      "topic": 2,
+      "publishers": [3, 4]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 3,
+    "fields": {
+      "created_at": "2025-08-18T14:00:00Z",
+      "updated_at": "2025-08-18T14:00:00Z",
+      "title": "Championship Highlights",
+      "content": "Curabitur vehicula urna eu lectus consequat, at iaculis nisl sodales.",
+      "published_date": "2025-08-18T14:00:00Z",
+      "topic": 3,
+      "publishers": [5, 6]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 4,
+    "fields": {
+      "created_at": "2025-08-17T16:45:00Z",
+      "updated_at": "2025-08-17T16:45:00Z",
+      "title": "Arts and Culture Weekly",
+      "content": "Suspendisse potenti. Ut sit amet purus quis purus fringilla.",
+      "published_date": "2025-08-17T16:45:00Z",
+      "topic": 4,
+      "publishers": [7, 8]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 5,
+    "fields": {
+      "created_at": "2025-08-16T11:15:00Z",
+      "updated_at": "2025-08-16T11:15:00Z",
+      "title": "Science Breakthroughs",
+      "content": "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.",
+      "published_date": "2025-08-16T11:15:00Z",
+      "topic": 5,
+      "publishers": [9, 10]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 6,
+    "fields": {
+      "created_at": "2025-08-15T13:30:00Z",
+      "updated_at": "2025-08-15T13:30:00Z",
+      "title": "Tech Innovations",
+      "content": "Phasellus suscipit nunc at nibh scelerisque, ac suscipit eros facilisis.",
+      "published_date": "2025-08-15T13:30:00Z",
+      "topic": 6,
+      "publishers": [1, 3]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 7,
+    "fields": {
+      "created_at": "2025-08-14T08:00:00Z",
+      "updated_at": "2025-08-14T08:00:00Z",
+      "title": "Health Today",
+      "content": "Aliquam erat volutpat. Donec volutpat risus nec urna aliquet.",
+      "published_date": "2025-08-14T08:00:00Z",
+      "topic": 7,
+      "publishers": [2, 4]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 8,
+    "fields": {
+      "created_at": "2025-08-13T17:20:00Z",
+      "updated_at": "2025-08-13T17:20:00Z",
+      "title": "World Travel Guide",
+      "content": "Integer consequat velit nec lectus vehicula, in ultricies urna venenatis.",
+      "published_date": "2025-08-13T17:20:00Z",
+      "topic": 8,
+      "publishers": [5, 7]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 9,
+    "fields": {
+      "created_at": "2025-08-12T12:10:00Z",
+      "updated_at": "2025-08-12T12:10:00Z",
+      "title": "Educational Trends",
+      "content": "Morbi in eros sit amet magna fermentum vehicula.",
+      "published_date": "2025-08-12T12:10:00Z",
+      "topic": 9,
+      "publishers": [6, 8]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 10,
+    "fields": {
+      "created_at": "2025-08-11T15:50:00Z",
+      "updated_at": "2025-08-11T15:50:00Z",
+      "title": "Environmental Watch",
+      "content": "Nulla facilisi. Mauris non eros nec tortor volutpat cursus.",
+      "published_date": "2025-08-11T15:50:00Z",
+      "topic": 10,
+      "publishers": [9, 10]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 11,
+    "fields": {
+      "created_at": "2025-08-10T09:00:00Z",
+      "updated_at": "2025-08-10T09:00:00Z",
+      "title": "Global Health Policies",
+      "content": "An overview of international health initiatives and their impact.",
+      "published_date": "2025-08-10T09:00:00Z",
+      "topic": 7,
+      "publishers": [2, 8]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 12,
+    "fields": {
+      "created_at": "2025-08-09T10:30:00Z",
+      "updated_at": "2025-08-09T10:30:00Z",
+      "title": "Education Reforms in 2025",
+      "content": "Key changes in the global education landscape this year.",
+      "published_date": "2025-08-09T10:30:00Z",
+      "topic": 9,
+      "publishers": [3, 5]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 13,
+    "fields": {
+      "created_at": "2025-08-08T11:15:00Z",
+      "updated_at": "2025-08-08T11:15:00Z",
+      "title": "Climate Change Effects",
+      "content": "A deep dive into the environmental shifts and mitigation strategies.",
+      "published_date": "2025-08-08T11:15:00Z",
+      "topic": 10,
+      "publishers": [4, 9]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 14,
+    "fields": {
+      "created_at": "2025-08-07T14:45:00Z",
+      "updated_at": "2025-08-07T14:45:00Z",
+      "title": "AI in Everyday Life",
+      "content": "How artificial intelligence is transforming our daily routines.",
+      "published_date": "2025-08-07T14:45:00Z",
+      "topic": 6,
+      "publishers": [6, 10]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 15,
+    "fields": {
+      "created_at": "2025-08-06T08:20:00Z",
+      "updated_at": "2025-08-06T08:20:00Z",
+      "title": "Travel on a Budget",
+      "content": "Tips and tricks for exploring the world without overspending.",
+      "published_date": "2025-08-06T08:20:00Z",
+      "topic": 8,
+      "publishers": [7, 2]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 16,
+    "fields": {
+      "created_at": "2025-08-05T10:00:00Z",
+      "updated_at": "2025-08-05T10:00:00Z",
+      "title": "Urban Development News",
+      "content": "Insights into the latest urban planning projects and infrastructure upgrades.",
+      "published_date": "2025-08-05T10:00:00Z",
+      "topic": 1,
+      "publishers": [4, 7]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 17,
+    "fields": {
+      "created_at": "2025-08-04T09:00:00Z",
+      "updated_at": "2025-08-04T09:00:00Z",
+      "title": "Global Markets Roundup",
+      "content": "An analytical overview of stock indices, currency fluctuations, and commodity prices.",
+      "published_date": "2025-08-04T09:00:00Z",
+      "topic": 2,
+      "publishers": [2, 6]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 18,
+    "fields": {
+      "created_at": "2025-08-03T14:00:00Z",
+      "updated_at": "2025-08-03T14:00:00Z",
+      "title": "Champions League Recap",
+      "content": "All the goals, key plays, and standout performances from last night’s matches.",
+      "published_date": "2025-08-03T14:00:00Z",
+      "topic": 3,
+      "publishers": [3, 9]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 19,
+    "fields": {
+      "created_at": "2025-08-02T16:00:00Z",
+      "updated_at": "2025-08-02T16:00:00Z",
+      "title": "Museum Exhibitions Spring 2025",
+      "content": "A curated guide to the must-see art, history, and science exhibits this season.",
+      "published_date": "2025-08-02T16:00:00Z",
+      "topic": 4,
+      "publishers": [5, 8]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 20,
+    "fields": {
+      "created_at": "2025-08-26T08:20:00Z",
+      "updated_at": "2025-08-26T08:20:00Z",
+      "title": "Senate Passes Landmark Infrastructure Bill",
+      "content": "After months of negotiations, the Senate approved a $1.2 trillion plan to rebuild roads, bridges and broadband networks across the country.",
+      "published_date": "2025-08-26T08:20:00Z",
+      "topic": 1,
+      "publishers": [3, 7]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 21,
+    "fields": {
+      "created_at": "2025-08-26T08:21:00Z",
+      "updated_at": "2025-08-26T08:21:00Z",
+      "title": "Presidential Debate Highlights Key Policy Differences",
+      "content": "Candidates squared off over healthcare, climate action and tax reform in a televised debate watched by over 50 million viewers.",
+      "published_date": "2025-08-26T08:21:00Z",
+      "topic": 1,
+      "publishers": [2, 5]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 22,
+    "fields": {
+      "created_at": "2025-08-26T08:22:00Z",
+      "updated_at": "2025-08-26T08:22:00Z",
+      "title": "New Trade Agreement Signed with Neighboring Countries",
+      "content": "Leaders announced a comprehensive trade deal aimed at reducing tariffs on agricultural products and boosting regional investment.",
+      "published_date": "2025-08-26T08:22:00Z",
+      "topic": 1,
+      "publishers": [1, 4]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 23,
+    "fields": {
+      "created_at": "2025-08-26T08:23:00Z",
+      "updated_at": "2025-08-26T08:23:00Z",
+      "title": "Local Elections See Record Turnout Amid Push for Reform",
+      "content": "Voters flocked to polling stations in unprecedented numbers as grassroots movements drove enthusiasm for municipal change.",
+      "published_date": "2025-08-26T08:23:00Z",
+      "topic": 1,
+      "publishers": [2, 8]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 24,
+    "fields": {
+      "created_at": "2025-08-26T08:24:00Z",
+      "updated_at": "2025-08-26T08:24:00Z",
+      "title": "Investigation Launched into Campaign Finance Violations",
+      "content": "The ethics committee opened an inquiry after allegations surfaced regarding undisclosed donations exceeding legal limits.",
+      "published_date": "2025-08-26T08:24:00Z",
+      "topic": 1,
+      "publishers": [6, 9]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 25,
+    "fields": {
+      "created_at": "2025-08-26T08:25:00Z",
+      "updated_at": "2025-08-26T08:25:00Z",
+      "title": "Global Markets Rally Amid Positive Earnings Reports",
+      "content": "Stocks surged as major companies reported better-than-expected quarterly profits, lifting investor sentiment worldwide.",
+      "published_date": "2025-08-26T08:25:00Z",
+      "topic": 2,
+      "publishers": [2, 6]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 26,
+    "fields": {
+      "created_at": "2025-08-26T08:26:00Z",
+      "updated_at": "2025-08-26T08:26:00Z",
+      "title": "Central Bank Holds Interest Rates Steady at Record Low",
+      "content": "In a unanimous decision, policymakers cited moderate inflation and sluggish growth as reasons to maintain current rates.",
+      "published_date": "2025-08-26T08:26:00Z",
+      "topic": 2,
+      "publishers": [1, 3]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 27,
+    "fields": {
+      "created_at": "2025-08-26T08:27:00Z",
+      "updated_at": "2025-08-26T08:27:00Z",
+      "title": "Unemployment Rate Drops to Five-Year Low",
+      "content": "The labor department reported a significant decline in jobless claims, driven by gains in manufacturing and services.",
+      "published_date": "2025-08-26T08:27:00Z",
+      "topic": 2,
+      "publishers": [4, 5]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 28,
+    "fields": {
+      "created_at": "2025-08-26T08:28:00Z",
+      "updated_at": "2025-08-26T08:28:00Z",
+      "title": "Champions League Final Preview: Teams Ready for Showdown",
+      "content": "Both clubs boast record attendance this season as they prepare for what promises to be a historic match.",
+      "published_date": "2025-08-26T08:28:00Z",
+      "topic": 3,
+      "publishers": [5, 8]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 29,
+    "fields": {
+      "created_at": "2025-08-26T08:29:00Z",
+      "updated_at": "2025-08-26T08:29:00Z",
+      "title": "Olympic Committee Announces New Qualification Standards",
+      "content": "Athletes now face stricter benchmarks, including time trials and international ranking requirements.",
+      "published_date": "2025-08-26T08:29:00Z",
+      "topic": 3,
+      "publishers": [6, 7]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 30,
+    "fields": {
+      "created_at": "2025-08-26T08:30:00Z",
+      "updated_at": "2025-08-26T08:30:00Z",
+      "title": "International Film Festival Announces Jury Members",
+      "content": "Esteemed directors and actors from five continents will judge entries at this year’s festival.",
+      "published_date": "2025-08-26T08:30:00Z",
+      "topic": 4,
+      "publishers": [2, 9]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 31,
+    "fields": {
+      "created_at": "2025-08-26T08:31:00Z",
+      "updated_at": "2025-08-26T08:31:00Z",
+      "title": "Modern Art Exhibition Opens at City Museum",
+      "content": "The new display features interactive installations and works by emerging local talent.",
+      "published_date": "2025-08-26T08:31:00Z",
+      "topic": 4,
+      "publishers": [3, 4]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 32,
+    "fields": {
+      "created_at": "2025-08-26T08:32:00Z",
+      "updated_at": "2025-08-26T08:32:00Z",
+      "title": "Shakespeare in the Park Returns with 'Hamlet'",
+      "content": "Audiences can enjoy free performances of the tragedy every weekend through September.",
+      "published_date": "2025-08-26T08:32:00Z",
+      "topic": 4,
+      "publishers": [1, 10]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 33,
+    "fields": {
+      "created_at": "2025-08-26T08:33:00Z",
+      "updated_at": "2025-08-26T08:33:00Z",
+      "title": "Jazz Legends to Perform at Summer Concert Series",
+      "content": "Iconic musicians will headline outdoor shows at the waterfront amphitheater this weekend.",
+      "published_date": "2025-08-26T08:33:00Z",
+      "topic": 4,
+      "publishers": [6, 7]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 34,
+    "fields": {
+      "created_at": "2025-08-26T08:34:00Z",
+      "updated_at": "2025-08-26T08:34:00Z",
+      "title": "Literary Awards Nominees Revealed for 2025",
+      "content": "The shortlist includes debut novelists alongside celebrated authors in poetry and nonfiction.",
+      "published_date": "2025-08-26T08:34:00Z",
+      "topic": 4,
+      "publishers": [5, 8]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 35,
+    "fields": {
+      "created_at": "2025-08-26T08:35:00Z",
+      "updated_at": "2025-08-26T08:35:00Z",
+      "title": "Historic Landmark Reopens After Renovation",
+      "content": "The century-old theater welcomes visitors again with restored frescoes and new accessibility features.",
+      "published_date": "2025-08-26T08:35:00Z",
+      "topic": 4,
+      "publishers": [2, 3]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 37,
+    "fields": {
+      "created_at": "2025-08-26T08:37:00Z",
+      "updated_at": "2025-08-26T08:37:00Z",
+      "title": "Tech Startup Raises $50M in Series B Funding",
+      "content": "The mobile-health platform plans to expand into three new markets by early next year.",
+      "published_date": "2025-08-26T08:37:00Z",
+      "topic": 6,
+      "publishers": [1, 5]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 38,
+    "fields": {
+      "created_at": "2025-08-26T08:38:00Z",
+      "updated_at": "2025-08-26T08:38:00Z",
+      "title": "New Smartphone Model Features Foldable Display",
+      "content": "The device boasts a seamless hinge design and a 7-inch internal OLED panel for multitasking.",
+      "published_date": "2025-08-26T08:38:00Z",
+      "topic": 6,
+      "publishers": [2, 6]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 39,
+    "fields": {
+      "created_at": "2025-08-26T08:39:00Z",
+      "updated_at": "2025-08-26T08:39:00Z",
+      "title": "AI Algorithm Predicts Weather Patterns with 90% Accuracy",
+      "content": "Developers claim the model can forecast storms up to two weeks in advance, aiding disaster preparedness.",
+      "published_date": "2025-08-26T08:39:00Z",
+      "topic": 6,
+      "publishers": [3, 7]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 40,
+    "fields": {
+      "created_at": "2025-08-26T08:40:00Z",
+      "updated_at": "2025-08-26T08:40:00Z",
+      "title": "Cybersecurity Firm Warns of Emerging Threats in IoT",
+      "content": "Experts advise updating device firmware regularly to protect against new botnet attacks.",
+      "published_date": "2025-08-26T08:40:00Z",
+      "topic": 6,
+      "publishers": [4, 8]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 41,
+    "fields": {
+      "created_at": "2025-08-26T08:41:00Z",
+      "updated_at": "2025-08-26T08:41:00Z",
+      "title": "Virtual Reality Training Gains Traction in Education",
+      "content": "Schools pilot immersive VR lessons to teach history, science and language in interactive 3D environments.",
+      "published_date": "2025-08-26T08:41:00Z",
+      "topic": 6,
+      "publishers": [5, 9]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 42,
+    "fields": {
+      "created_at": "2025-08-26T08:42:00Z",
+      "updated_at": "2025-08-26T08:42:00Z",
+      "title": "Autonomous Vehicles Enter Testing Phase in City Streets",
+      "content": "Regulators granted permits for a fleet of driverless cars to operate under supervised conditions.",
+      "published_date": "2025-08-26T08:42:00Z",
+      "topic": 6,
+      "publishers": [6, 10]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 43,
+    "fields": {
+      "created_at": "2025-08-26T08:43:00Z",
+      "updated_at": "2025-08-26T08:43:00Z",
+      "title": "Blockchain Platform Launches Decentralized Finance App",
+      "content": "Users can now lend, borrow and earn interest without traditional intermediaries on the new service.",
+      "published_date": "2025-08-26T08:43:00Z",
+      "topic": 6,
+      "publishers": [1, 3]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 44,
+    "fields": {
+      "created_at": "2025-08-26T08:44:00Z",
+      "updated_at": "2025-08-26T08:44:00Z",
+      "title": "Study Shows Link Between Diet and Mental Health",
+      "content": "Nutritionists emphasize balanced meals to support mood regulation and stress management.",
+      "published_date": "2025-08-26T08:44:00Z",
+      "topic": 7,
+      "publishers": [2, 4]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 45,
+    "fields": {
+      "created_at": "2025-08-26T08:45:00Z",
+      "updated_at": "2025-08-26T08:45:00Z",
+      "title": "Healthcare Workers Strike Over Staffing Shortages",
+      "content": "Thousands of nurses and technicians walked off the job demanding better pay and safer patient ratios.",
+      "published_date": "2025-08-26T08:45:00Z",
+      "topic": 7,
+      "publishers": [5, 6]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 46,
+    "fields": {
+      "created_at": "2025-08-26T08:46:00Z",
+      "updated_at": "2025-08-26T08:46:00Z",
+      "title": "New Vaccine Approved for Global Distribution",
+      "content": "Health authorities cleared a single-dose immunization to combat emerging viral strains.",
+      "published_date": "2025-08-26T08:46:00Z",
+      "topic": 7,
+      "publishers": [3, 7]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 47,
+    "fields": {
+      "created_at": "2025-08-26T08:47:00Z",
+      "updated_at": "2025-08-26T08:47:00Z",
+      "title": "Wellness Apps Surge in Popularity Among Young Adults",
+      "content": "Developers report a 200 percent increase in downloads of meditation and fitness tracking apps this year.",
+      "published_date": "2025-08-26T08:47:00Z",
+      "topic": 7,
+      "publishers": [1, 8]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 48,
+    "fields": {
+      "created_at": "2025-08-26T08:48:00Z",
+      "updated_at": "2025-08-26T08:48:00Z",
+      "title": "Top 10 Destinations for Eco-Friendly Tourism",
+      "content": "From coral-reef conservation projects to off-grid retreats, these spots blend adventure with sustainability.",
+      "published_date": "2025-08-26T08:48:00Z",
+      "topic": 8,
+      "publishers": [4, 5]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 49,
+    "fields": {
+      "created_at": "2025-08-26T08:49:00Z",
+      "updated_at": "2025-08-26T08:49:00Z",
+      "title": "Airline Introduces Nonstop Flights to Remote Islands",
+      "content": "The new service aims to boost tourism and reduce travel times by up to 50 percent.",
+      "published_date": "2025-08-26T08:49:00Z",
+      "topic": 8,
+      "publishers": [6, 9]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 50,
+    "fields": {
+      "created_at": "2025-08-26T08:50:00Z",
+      "updated_at": "2025-08-26T08:50:00Z",
+      "title": "University Implements Tuition Freeze for Next Academic Year",
+      "content": "Administrators cited rising living costs as the reason for halting fee increases across all departments.",
+      "published_date": "2025-08-26T08:50:00Z",
+      "topic": 9,
+      "publishers": [2, 7]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 51,
+    "fields": {
+      "created_at": "2025-08-26T08:51:00Z",
+      "updated_at": "2025-08-26T08:51:00Z",
+      "title": "Online Learning Platforms See Record Enrollment",
+      "content": "E-course providers report a 45 percent rise in sign-ups for professional development and certification programs.",
+      "published_date": "2025-08-26T08:51:00Z",
+      "topic": 9,
+      "publishers": [3, 8]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 52,
+    "fields": {
+      "created_at": "2025-08-26T08:52:00Z",
+      "updated_at": "2025-08-26T08:52:00Z",
+      "title": "School District Adopts New STEM Curriculum Standards",
+      "content": "The revised framework emphasizes project-based learning in robotics, coding and environmental science.",
+      "published_date": "2025-08-26T08:52:00Z",
+      "topic": 9,
+      "publishers": [1, 4]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 53,
+    "fields": {
+      "created_at": "2025-08-26T08:53:00Z",
+      "updated_at": "2025-08-26T08:53:00Z",
+      "title": "Language Immersion Programs Expand Across the Country",
+      "content": "More schools are offering bilingual curricula to meet growing demand for multilingual graduates.",
+      "published_date": "2025-08-26T08:53:00Z",
+      "topic": 9,
+      "publishers": [5, 6]
+    }
+  },
+  {
+    "model": "core.newspaper",
+    "pk": 54,
+    "fields": {
+      "created_at": "2025-08-26T08:54:00Z",
+      "updated_at": "2025-08-26T08:54:00Z",
+      "title": "Climate Summit Yields Commitments to Reduce Emissions",
+      "content": "Delegates from over 70 nations pledged new targets to cut carbon output by 40 percent by 2035.",
+      "published_date": "2025-08-26T08:54:00Z",
+      "topic": 10,
+      "publishers": [9, 10]
+    }
+  }
+]

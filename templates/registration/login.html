@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load crispy_forms_filters %}
+
+{% block content %}
+  <div class="container my-5 d-flex justify-content-center">
+
+    <form method="post" class="p-4 border rounded text-center"
+          style="max-width: 400px; width: 100%; background-color: #ffffff;">
+      {% csrf_token %}
+
+      <h3 class="mb-4 text-primary"><i class="bi bi-box-arrow-in-right me-2"></i>Login</h3>
+
+      {{ form|crispy }}
+
+      <button type="submit" class="btn btn-success w-100 mt-3">Login</button>
+
+    </form>
+
+  </div>
+{% endblock %}
