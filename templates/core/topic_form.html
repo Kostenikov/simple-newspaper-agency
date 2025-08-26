@@ -2,14 +2,22 @@
 {% load crispy_forms_filters %}
 
 {% block content %}
-  <h1>{{ object|yesno:"Update,Create" }} Topic</h1>
-  <form action="" method="post">
-    {% csrf_token %}
-    <div class="w-25">
-      {{ form|crispy }}
-    </div>
+  <div class="container my-5 d-flex justify-content-center">
 
-    <input type="submit" value="{{ object|yesno:"Update,Create" }}" class="btn btn-outline-success">
-    <a href="javascript:history.back()" class="btn btn-outline-dark">Cancel</a>
-  </form>
+    <form method="post" class="p-4 border rounded" style="max-width: 600px; width: 100%; background-color: #ffffff;">
+      {% csrf_token %}
+
+      <h3 class="mb-4 text-center text-primary">{{ object|yesno:"Update,Create" }} Topic</h3>
+
+      {{ form|crispy }}
+
+      <div class="d-flex justify-content-between mt-4">
+        <button type="submit" class="btn btn-success w-45">
+          {{ object|yesno:"Update,Create" }}
+        </button>
+        <a href="javascript:history.back()" class="btn btn-outline-dark w-45">Cancel</a>
+      </div>
+    </form>
+
+  </div>
 {% endblock %}

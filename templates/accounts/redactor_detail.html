@@ -50,9 +50,8 @@
             <tr>
               <th scope="col">#</th>
               <th scope="col">Title</th>
+              <th scope="col">Topic</th>
               <th scope="col">Published date</th>
-              <th scope="col">Created</th>
-              <th scope="col">Updated</th>
               <th scope="col" class="text-center">Actions</th>
             </tr>
             </thead>
@@ -66,9 +65,9 @@
                   </a>
                 </th>
                 <td>{{ newspaper.title }}</td>
+                <td><a href="{% url 'core:topic-detail' pk=newspaper.topic.pk %}"><span
+                    class="badge bg-secondary">{{ newspaper.topic }}</span></a>
                 <td>{{ newspaper.published_date }}</td>
-                <td>{{ newspaper.created_at }}</td>
-                <td>{{ newspaper.updated_at }}</td>
                 <td class="text-center">
                   <a href="{% url 'core:newspaper-update' pk=newspaper.pk %}"
                      class="btn btn-sm btn-outline-primary me-1">

@@ -14,8 +14,19 @@
           <i class="bi bi-type me-2"></i> {{ newspaper.title }}
         </h5>
         <p class="card-text">
-          <i class="bi bi-tag me-2"></i>
-          <span class="badge bg-secondary">{{ newspaper.topic }}</span>
+          <i class="bi bi-calendar-date me-2"></i> Published date:
+          <span class="badge bg-secondary">{{ newspaper.published_date }}</span>
+        </p>
+        <p class="card-text">
+          <i class="bi bi-tag me-2"></i> Topic:
+          {% if newspaper.topic %}
+            <a href="{% url 'core:topic-detail' pk=newspaper.topic.pk %}"
+               class="link-primary text-decoration-none">
+              <span class="badge bg-secondary">{{ newspaper.topic }}</span>
+            </a>
+          {% else %}
+            <span class="text-muted">No topic</span>
+          {% endif %}
         </p>
         <p class="card-text">
           <i class="bi bi-file-text me-2"></i> {{ newspaper.content }}
