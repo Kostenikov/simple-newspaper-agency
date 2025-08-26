@@ -11,7 +11,7 @@
       <p class="card-text">News count: {{ topic_news_count }}</p>
       <hr>
       <p class="card-text">
-        <a href="{% url 'core:topic-update' pk=topic.pk %}" class="btn btn-outline-info">
+        <a href="{% url 'core:topic-update' pk=topic.pk %}" class="btn btn-outline-primary">
           <i class="bi bi-arrow-repeat"></i></a>
         <a href="{% url 'core:topic-delete' pk=topic.pk %}" class="btn btn-outline-danger">
           <i class="bi bi-trash"></i></a>
@@ -34,12 +34,12 @@
       </thead>
       <tbody>
       {% for newspaper in topic.newspapers.all %}
-        <tr>
+        <tr class="align-middle">
           <th scope="row"><a href="{% url 'core:newspaper-detail' pk=newspaper.pk %}">{{ newspaper.id }}</a></th>
           <td>{{ newspaper.title }}</td>
-          <td><a href="{% url 'core:newspaper-update' pk=newspaper.pk %}" class="btn btn-outline-info mb-0">
+          <td><a href="{% url 'core:newspaper-update' pk=newspaper.pk %}" class="btn btn-outline-primary">
             <i class="bi bi-arrow-repeat"></i></a></td>
-          <td><a href="{% url 'core:newspaper-delete' pk=newspaper.pk %}" class="btn btn-outline-danger mb-0">
+          <td><a href="{% url 'core:newspaper-delete' pk=newspaper.pk %}" class="btn btn-outline-danger">
             <i class="bi bi-trash"></i></a></td>
           <td>{{ newspaper.published_date }}</td>
           <td>{{ newspaper.created_at }}</td>

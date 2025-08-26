@@ -19,15 +19,15 @@
       </thead>
       <tbody>
       {% for redactor in redactor_list %}
-        <tr>
+        <tr class="align-middle">
           <th scope="row"><a href="{% url 'core:redactor-detail' pk=redactor.pk %}">{{ redactor.id }}</a></th>
           <td>{{ redactor.first_name }}</td>
           <td>{{ redactor.last_name }}</td>
           <td>{{ redactor.email }}</td>
           <td>{{ redactor.years_of_experience }}</td>
-          <td><a href="{% url 'core:redactor-update' pk=redactor.pk %}" class="btn btn-outline-info mb-0">
+          <td><a href="{% url 'core:redactor-update' pk=redactor.pk %}" class="btn btn-outline-primary">
             <i class="bi bi-arrow-repeat"></i></a></td>
-          <td><a href="{% url 'core:redactor-delete' pk=redactor.pk %}" class="btn btn-outline-danger mb-0">
+          <td><a href="{% url 'core:redactor-delete' pk=redactor.pk %}" class="btn btn-outline-danger">
             <i class="bi bi-trash"></i></a></td>
         </tr>
       {% endfor %}

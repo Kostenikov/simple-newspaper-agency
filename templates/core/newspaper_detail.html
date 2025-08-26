@@ -7,12 +7,12 @@
     </div>
     <div class="card-body">
       <h5 class="card-title">Title: {{ newspaper.title }}</h5>
-      <p class="card-text">Topic: {{ newspaper.topic }}</p>
+      <p class="card-text">Topic: <span class="badge bg-secondary fs-6">{{ newspaper.topic }}</span></p>
       <hr>
       <p class="card-text">Content: {{ newspaper.content }}</p>
       <hr>
       <p class="card-text">
-        <a href="{% url 'core:newspaper-update' pk=newspaper.pk %}" class="btn btn-outline-info">
+        <a href="{% url 'core:newspaper-update' pk=newspaper.pk %}" class="btn btn-outline-primary">
           <i class="bi bi-arrow-repeat"></i></a>
         <a href="{% url 'core:newspaper-delete' pk=newspaper.pk %}" class="btn btn-outline-danger">
           <i class="bi bi-trash"></i></a>
@@ -34,7 +34,7 @@
       </thead>
       <tbody>
       {% for redactor in newspaper.publishers.all %}
-        <tr>
+        <tr class="align-middle">
           <th scope="row"><a href="{% url 'core:redactor-detail' pk=redactor.pk %}">{{ redactor.id }}</a></th>
           <td>{{ redactor.first_name }}</td>
           <td>{{ redactor.last_name }}</td>

@@ -1,5 +1,8 @@
 from django.contrib.auth import get_user_model
+from django.contrib.auth.forms import SetPasswordForm
+from django.contrib.auth.views import PasswordChangeView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.messages.views import SuccessMessageMixin
 from django.db.models import Q
 from django.urls import reverse_lazy
 from django.views import generic
@@ -54,21 +57,28 @@ class TopicDetailView(LoginRequiredMixin, generic.DetailView):
         return context
 
 
-class TopicCreateView(LoginRequiredMixin, generic.CreateView):
+class TopicCreateView(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
     model = Topic
     fields = "__all__"
-    success_url = reverse_lazy("core:topic-list")
+    success_message = "Topic was successfully created!"
+
+    def get_success_url(self):
+        return reverse_lazy("core:topic-detail", kwargs={"pk": self.object.pk})
 
 
-class TopicUpdateView(LoginRequiredMixin, generic.UpdateView):
+class TopicUpdateView(LoginRequiredMixin, SuccessMessageMixin, generic.UpdateView):
     model = Topic
     fields = "__all__"
-    success_url = reverse_lazy("core:topic-list")
+    success_message = "Topic was successfully updated!"
+
+    def get_success_url(self):
+        return reverse_lazy("core:topic-detail", kwargs={"pk": self.object.pk})
 
 
-class TopicDeleteView(LoginRequiredMixin, generic.DeleteView):
+class TopicDeleteView(LoginRequiredMixin, SuccessMessageMixin, generic.DeleteView):
     model = Topic
     success_url = reverse_lazy("core:topic-list")
+    success_message = "Topic was successfully deleted!"
 
 
 class NewspaperListView(LoginRequiredMixin, generic.ListView):
@@ -101,21 +111,28 @@ class NewspaperDetailView(LoginRequiredMixin, generic.DetailView):
     queryset = Newspaper.objects.select_related("topic").prefetch_related("publishers")
 
 
-class NewspaperCreateView(LoginRequiredMixin, generic.CreateView):
+class NewspaperCreateView(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
     model = Newspaper
     form_class = NewspaperForm
-    success_url = reverse_lazy("core:newspaper-list")
+    success_message = "Newspaper was successfully created!"
+
+    def get_success_url(self):
+        return reverse_lazy("core:newspaper-detail", kwargs={"pk": self.object.pk})
 
 
-class NewspaperUpdateView(LoginRequiredMixin, generic.UpdateView):
+class NewspaperUpdateView(LoginRequiredMixin, SuccessMessageMixin, generic.UpdateView):
     model = Newspaper
     form_class = NewspaperForm
-    success_url = reverse_lazy("core:newspaper-list")
+    success_message = "Newspaper was successfully updated!"
+
+    def get_success_url(self):
+        return reverse_lazy("core:newspaper-detail", kwargs={"pk": self.object.pk})
 
 
-class NewspaperDeleteView(LoginRequiredMixin, generic.DeleteView):
+class NewspaperDeleteView(LoginRequiredMixin, SuccessMessageMixin, generic.DeleteView):
     model = Newspaper
     success_url = reverse_lazy("core:newspaper-list")
+    success_message = "Newspaper was successfully deleted!"
 
 
 class RedactorListView(LoginRequiredMixin, generic.ListView):
@@ -151,21 +168,38 @@ class RedactorDetailView(LoginRequiredMixin, generic.DetailView):
     queryset = Redactor.objects.prefetch_related("newspapers__topic")
 
 
-class RedactorCreateView(LoginRequiredMixin, generic.CreateView):
+class RedactorCreateView(LoginRequiredMixin, SuccessMessageMixin, generic.CreateView):
     model = Redactor
     form_class = RedactorCreationForm
     template_name = "core/redactor_form.html"
-    success_url = reverse_lazy("core:redactor-list")
+    success_message = "Redactor was successfully created!"
+
+    def get_success_url(self):
+        return reverse_lazy("core:redactor-detail", kwargs={"pk": self.object.pk})
 
 
-class RedactorUpdateView(LoginRequiredMixin, generic.UpdateView):
+class RedactorUpdateView(LoginRequiredMixin, SuccessMessageMixin, generic.UpdateView):
     model = Redactor
     form_class = RedactorUpdateForm
     template_name = "core/redactor_form.html"
-    success_url = reverse_lazy("core:redactor-list")
+    success_message = "Redactor was successfully updated!"
+
+    def get_success_url(self):
+        return reverse_lazy("core:redactor-detail", kwargs={"pk": self.object.pk})
 
 
-class RedactorDeleteView(LoginRequiredMixin, generic.DeleteView):
+class RedactorDeleteView(LoginRequiredMixin, SuccessMessageMixin, generic.DeleteView):
     model = Redactor
     template_name = "core/redactor_confirm_delete.html"
     success_url = reverse_lazy("core:redactor-list")
+    success_message = "Redactor was successfully deleted!"
+
+
+class RedactorPasswordChange(SuccessMessageMixin, PasswordChangeView):
+    model = Redactor
+    form_class = SetPasswordForm
+    template_name = "core/redactor_password_change.html"
+    success_message = "Password was successfully changed!"
+
+    def get_success_url(self):
+        return reverse_lazy("core:redactor-detail", kwargs={"pk": self.kwargs["pk"]})

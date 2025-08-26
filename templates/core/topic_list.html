@@ -16,12 +16,12 @@
       </thead>
       <tbody>
       {% for topic in topic_list %}
-        <tr>
+        <tr class="align-middle">
           <th scope="row"><a href="{% url 'core:topic-detail' pk=topic.pk %}">{{ topic.id }}</a></th>
-          <td>{{ topic.name }}</td>
-          <td><a href="{% url 'core:topic-update' pk=topic.pk %}" class="btn btn-outline-info mb-0">
+          <td><span class="badge bg-secondary fs-6">{{ topic.name }}</span></td>
+          <td><a href="{% url 'core:topic-update' pk=topic.pk %}" class="btn btn-outline-primary">
             <i class="bi bi-arrow-repeat"></i></a></td>
-          <td><a href="{% url 'core:topic-delete' pk=topic.pk %}" class="btn btn-outline-danger mb-0">
+          <td><a href="{% url 'core:topic-delete' pk=topic.pk %}" class="btn btn-outline-danger">
             <i class="bi bi-trash"></i></a></td>
         </tr>
       {% endfor %}
