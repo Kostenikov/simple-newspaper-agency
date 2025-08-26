@@ -4,7 +4,6 @@ from core.views import (
     HomeView,
     TopicListView,
     NewspaperListView,
-    RedactorListView,
     TopicDetailView,
     TopicCreateView,
     TopicUpdateView,
@@ -13,11 +12,6 @@ from core.views import (
     NewspaperCreateView,
     NewspaperUpdateView,
     NewspaperDeleteView,
-    RedactorDetailView,
-    RedactorCreateView,
-    RedactorUpdateView,
-    RedactorDeleteView,
-    RedactorPasswordChange,
 )
 
 app_name = "core"
@@ -33,10 +27,4 @@ urlpatterns = [
     path("newspapers/create/", NewspaperCreateView.as_view(), name="newspaper-create"),
     path("newspapers/<int:pk>/update/", NewspaperUpdateView.as_view(), name="newspaper-update"),
     path("newspapers/<int:pk>/delete/", NewspaperDeleteView.as_view(), name="newspaper-delete"),
-    path("redactors/", RedactorListView.as_view(), name="redactor-list"),
-    path("redactors/<int:pk>/", RedactorDetailView.as_view(), name="redactor-detail"),
-    path("redactors/create/", RedactorCreateView.as_view(), name="redactor-create"),
-    path("redactors/<int:pk>/update/", RedactorUpdateView.as_view(), name="redactor-update"),
-    path("redactors/<int:pk>/delete/", RedactorDeleteView.as_view(), name="redactor-delete"),
-    path("redactors/<int:pk>/change-password/", RedactorPasswordChange.as_view(), name="redactor-password-change"),
 ]

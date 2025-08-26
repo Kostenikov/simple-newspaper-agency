@@ -35,7 +35,7 @@
       <tbody>
       {% for redactor in newspaper.publishers.all %}
         <tr class="align-middle">
-          <th scope="row"><a href="{% url 'core:redactor-detail' pk=redactor.pk %}">{{ redactor.id }}</a></th>
+          <th scope="row"><a href="{% url 'accounts:redactor-detail' pk=redactor.pk %}">{{ redactor.id }}</a></th>
           <td>{{ redactor.first_name }}</td>
           <td>{{ redactor.last_name }}</td>
           <td>{{ redactor.email }}</td>

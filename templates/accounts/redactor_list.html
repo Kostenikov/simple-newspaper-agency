@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>Redactors: <a href="{% url 'core:redactor-create' %}" class="btn btn-primary link-to-page"><i
+  <h1>Redactors: <a href="{% url 'accounts:redactor-create' %}" class="btn btn-primary link-to-page"><i
       class="bi bi-plus-circle me-1"></i>Add new</a></h1>
   {% include "includes/search_form.html" %}
   {% if redactor_list %}
@@ -20,14 +20,14 @@
       <tbody>
       {% for redactor in redactor_list %}
         <tr class="align-middle">
-          <th scope="row"><a href="{% url 'core:redactor-detail' pk=redactor.pk %}">{{ redactor.id }}</a></th>
+          <th scope="row"><a href="{% url 'accounts:redactor-detail' pk=redactor.pk %}">{{ redactor.id }}</a></th>
           <td>{{ redactor.first_name }}</td>
           <td>{{ redactor.last_name }}</td>
           <td>{{ redactor.email }}</td>
           <td>{{ redactor.years_of_experience }}</td>
-          <td><a href="{% url 'core:redactor-update' pk=redactor.pk %}" class="btn btn-outline-primary">
+          <td><a href="{% url 'accounts:redactor-update' pk=redactor.pk %}" class="btn btn-outline-primary">
             <i class="bi bi-arrow-repeat"></i></a></td>
-          <td><a href="{% url 'core:redactor-delete' pk=redactor.pk %}" class="btn btn-outline-danger">
+          <td><a href="{% url 'accounts:redactor-delete' pk=redactor.pk %}" class="btn btn-outline-danger">
             <i class="bi bi-trash"></i></a></td>
         </tr>
       {% endfor %}

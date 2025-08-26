@@ -13,11 +13,11 @@
         year{{ redactor.years_of_experience|pluralize }}</p>
       <hr>
       <p class="card-text">
-        <a href="{% url 'core:redactor-update' pk=redactor.pk %}" class="btn btn-outline-primary">
+        <a href="{% url 'accounts:redactor-update' pk=redactor.pk %}" class="btn btn-outline-primary">
           <i class="bi bi-arrow-repeat"></i></a>
-        <a href="{% url 'core:redactor-password-change' pk=redactor.pk %}" class="btn btn-outline-success">
+        <a href="{% url 'accounts:redactor-password-change' pk=redactor.pk %}" class="btn btn-outline-success">
           <i class="bi bi-key"></i></a>
-        <a href="{% url 'core:redactor-delete' pk=redactor.pk %}" class="btn btn-outline-danger">
+        <a href="{% url 'accounts:redactor-delete' pk=redactor.pk %}" class="btn btn-outline-danger">
           <i class="bi bi-trash"></i></a>
       </p>
     </div>
