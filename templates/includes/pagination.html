@@ -1,37 +1,39 @@
 {% load query_transform %}
 {% if is_paginated %}
-  <ul class="pagination">
+  <div class="d-flex justify-content-center my-4">
+    <ul class="pagination">
 
-    <li class="page-item {% if page_obj.number == 1 %}disabled{% endif %}">
-      <a class="page-link" href="?{% query_transform request page=1 %}">First</a>
-    </li>
-
-    {% if page_obj.has_previous %}
-      <li class="page-item">
-        <a class="page-link" href="?{% query_transform request page=page_obj.previous_page_number %}">Prev</a>
+      <li class="page-item {% if page_obj.number == 1 %}disabled{% endif %}">
+        <a class="page-link" href="?{% query_transform request page=1 %}">First</a>
       </li>
-    {% else %}
-      <li class="page-item disabled">
-        <span class="page-link">Prev</span>
-      </li>
-    {% endif %}
 
-    <li class="page-item active">
-      <span class="page-link">{{ page_obj.number }} of {{ paginator.num_pages }}</span>
-    </li>
+      {% if page_obj.has_previous %}
+        <li class="page-item">
+          <a class="page-link" href="?{% query_transform request page=page_obj.previous_page_number %}">Prev</a>
+        </li>
+      {% else %}
+        <li class="page-item disabled">
+          <span class="page-link">Prev</span>
+        </li>
+      {% endif %}
 
-    {% if page_obj.has_next %}
-      <li class="page-item">
-        <a class="page-link" href="?{% query_transform request page=page_obj.next_page_number %}">Next</a>
+      <li class="page-item active">
+        <span class="page-link">{{ page_obj.number }} of {{ paginator.num_pages }}</span>
       </li>
-    {% else %}
-      <li class="page-item disabled">
-        <span class="page-link">Next</span>
-      </li>
-    {% endif %}
 
-    <li class="page-item {% if page_obj.number == paginator.num_pages %}disabled{% endif %}">
-      <a class="page-link" href="?{% query_transform request page=paginator.num_pages %}">Last</a>
-    </li>
-  </ul>
+      {% if page_obj.has_next %}
+        <li class="page-item">
+          <a class="page-link" href="?{% query_transform request page=page_obj.next_page_number %}">Next</a>
+        </li>
+      {% else %}
+        <li class="page-item disabled">
+          <span class="page-link">Next</span>
+        </li>
+      {% endif %}
+
+      <li class="page-item {% if page_obj.number == paginator.num_pages %}disabled{% endif %}">
+        <a class="page-link" href="?{% query_transform request page=paginator.num_pages %}">Last</a>
+      </li>
+    </ul>
+  </div>
 {% endif %}
