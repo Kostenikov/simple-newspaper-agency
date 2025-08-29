@@ -40,3 +40,6 @@ Password: Zaq12wsxcde3
 ```
 python manage.py runserver
 ```
+
+### 8. Demo version:
+https://newspaper-agency-drgb.onrender.com/
